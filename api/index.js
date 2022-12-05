@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-var bodyParser = require('body-parser')
+const bodyParser = require('body-parser')
 require('dotenv').config()
 
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -92,8 +92,6 @@ app.get('/api/users/:userId/logs', (req, res) => {
     count: log.length,
     log,
   }
-  console.log(responseObj);
-  console.log(log);
 
   res.json(responseObj)
 });
